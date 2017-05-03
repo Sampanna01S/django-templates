@@ -1,4 +1,4 @@
-"""learning_templates URL Configuration
+"""learning_users URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^basic_app/', include('basic_app.urls')),
+    url(r'^logout/$', views.user_logout, name='logout'),
+    url(r'^special/$', views.special, name='special')
 ]
